@@ -1,0 +1,12 @@
+body {
+    font-family: Quicksand !important;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

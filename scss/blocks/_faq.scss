@@ -1,0 +1,109 @@
+.faq__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 176px;
+    margin-bottom: 174px;
+}
+
+.faq__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__subtitle {
+    margin: 0 auto;
+    font-size: 12px;
+    columns: var(--color-dark-blue);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.faq__title {
+    margin: 0 auto;
+    font-size: 24px;
+    color: var(--color-dark-blue);
+    margin-bottom: 68px;
+}
+
+.faq__question {
+    border-bottom: 1px solid #D8E3FE;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq__btn {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    text-align: start;
+    padding: 20px;
+    color: #b9bfd4;
+
+    &:hover {
+        color: #596077;
+    }
+
+    &.active {
+        color: #495274;
+
+        & svg {
+            stroke: #495274;
+            transform: rotate(-180deg);
+        }
+    }
+
+    & svg {
+        margin-right: 18px;
+        stroke: #b4b6bd;
+        transition: transform 0.25s;
+    }
+}
+
+.faq__answer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 62px;
+    padding-left: 56px;
+    padding-top: 16px;
+    padding-right: 15px;
+    transform: translateY(-30%);
+    transition: max-height 0.25s ease-in, padding-bottom 0.25s ease-in, transform 0.25s ease-in;
+
+    max-height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+
+    &.active {
+
+        visibility: visible;
+        overflow: visible;
+        max-height: 140px;
+
+        padding-bottom: 52px;
+        transform: translate(0%);
+    }
+}
+
+.answer__text {
+    font-size: 14px;
+    line-height: 191%;
+    letter-spacing: 3%;
+    color: #8D96BD;
+    max-width: 391px;
+}
+
+.answer__btn {
+    color: #7382A3;
+    background-color: #E8ECF4;
+    border: 0;
+    border-radius: 2%;
+    white-space: nowrap;
+    padding: 13px 15px;
+    transition: background-color var(--transition-duration) ease;
+
+    &:hover {
+        background-color: #d5e3ff;
+    }
+}

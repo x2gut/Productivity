@@ -1,0 +1,19 @@
+@mixin font-settings($fz, $color, $weight, $ls: 0) {
+    $letter-spacing-percent: $fz * ($ls / 100);
+    font-size: $fz;
+    color: $color;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing-percent;
+}
+
+@mixin height-clamp($min-height, $preferred-height, $max-height, $unit: px) {
+    height: clamp(#{$min-height}#{$unit}, #{$preferred-height}#{$unit}, #{$max-height}#{$unit});
+  }
+
+  @mixin clamp-font-size($min-size, $preferred, $max-size) {
+    font-size: clamp(#{$min-size}, #{$preferred}, #{$max-size});
+}
+
+@mixin value-clamp($property, $min-size,$pref-value, $max-size) {
+    #{$property}: clamp($min-size, $pref-value, $max-size)
+}

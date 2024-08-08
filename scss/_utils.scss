@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 12px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}

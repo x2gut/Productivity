@@ -1,0 +1,16 @@
+.customers__list {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include value-clamp(gap, 32px, 4.5vw, 76px);
+}
+
+.customers__link {
+
+    &:hover svg path {
+        fill: var(--color-blue);
+    }
+}

@@ -1,0 +1,162 @@
+.hero {
+    z-index: 1;
+    background: linear-gradient(to top, #F4F7FF 0%, #F1F5FF 100%);
+}
+
+.hero__wrapper {
+    position: relative;
+    height: clamp(16.875rem, 2.25rem + 44.2765vw,43.75rem);
+    padding-top: clamp(30px, 5vw, 92px);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: min(100%, 120rem);
+        background-image: url("/img/clouds.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+}
+
+.hero__content {
+    position: absolute;
+    bottom: 0;
+    width: min(100%,120rem);
+    max-height: 100%;
+    order: 3;
+
+    & svg g circle{
+        cursor: pointer;
+        transition: fill var(--transition-duration);
+        transition: stroke var(--transition-duration);
+    }
+
+    & svg g:hover circle {
+        fill: var(--color-blue);
+        stroke: #FFF;
+    }
+
+    & svg g.active {
+        circle {
+            fill: var(--color-blue);
+            stroke: #FFF;
+        }
+    }
+}
+
+
+.hero__slider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider__container {
+    display: flex;
+    align-items: center;
+    max-width: clamp(300px, 50vw, 580px);
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: clamp(300px, 50vw, 580px);
+
+    transition: opacity 0.5s ease, transform 0.6s; 
+}
+
+.slider__item.visually-hidden {
+    opacity: 0; 
+}
+
+.item__subtitle {
+    color: var(--color-dark-blue);
+    font-size: 10px;
+    margin-bottom: clamp(8px, 2vw, 16px);
+}
+
+.item__title {
+    color: var(--color-blue);
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 300;
+    margin-bottom: clamp(14px, 2.25vw, 28px);
+}
+
+.item__title span {
+    color: var(--color-dark-blue);
+    font-weight: 400;
+}
+
+.item__text {
+    font-size: clamp(8.5px, 1.7vw, 17px);
+    color: var(--color-gray-alt);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 190%;
+    text-align: center;
+    
+    margin-bottom: clamp(8px, 2.25vw, 16px);
+}
+
+.slider__button {
+    width: clamp(32px, 5vw, 52px);
+    height: clamp(32px, 5vw, 52px);
+    border: 0px;
+    border-radius: 100%;
+    background-color: #FFF;
+    transition: background-color var(--transition-duration) ease, fill var(--transition-duration) ease;
+
+    &:hover {
+        background-color: var(--color-gray-alt);
+        fill: #FFF;
+    }
+
+    &:hover svg path {
+        fill: #FFF;
+    }
+
+}
+
+.hero__stat {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-duration) ease;
+}
+
+.hero__stat.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero__pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    display: flex;
+    gap: 12px;
+}
+
+.pagination__dot {
+    width: 8px;
+    height: 8px;
+    background-color: #D1D6E3;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color .1s ease-in;
+
+    &:hover {
+        background-color: var(--color-gray-alt);
+    }
+}
+
+.pagination__dot.active {
+    background-color: var(--color-blue);
+}

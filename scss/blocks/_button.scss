@@ -1,0 +1,16 @@
+.btn {
+    color: var(--color-blue);
+    background-color: var(--button-color-light-blue);
+    border: 0;
+    padding: 13px 15px; 
+    font-weight: 700;
+    border-radius: 2px;
+    transition: background-color, color var(--transition-duration) ease;
+
+    white-space: nowrap;
+
+    &:hover {
+        background-color: var(--color-blue);
+        color: #FFF;
+    }
+}
