@@ -110,7 +110,8 @@ function listeners() {
     heroSliderItems.thumbs.forEach((item, index) => {
         item.addEventListener("click", () => {
             changeSlide(indexMapThumb[index], heroSliderItems.slides, heroSliderItems.paginationDots, heroSliderItems.container.offsetWidth, heroSliderItems.thumbs, heroSliderItems.stat);
-            currentIndex = index;
+            currentIndex = indexMapThumb[index];
+            console.log(currentIndex);
         });
     });
 
