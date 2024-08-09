@@ -532,7 +532,12 @@ input {
 }
 
 .header__logo {
-  padding-right: clamp(32px, 4.5vw, 72px);
+  display: flex;
+  margin-right: clamp(32px, 4.5vw, 72px);
+}
+.header__logo img {
+  width: 26px;
+  height: auto;
 }
 
 .header__left {
@@ -1637,8 +1642,11 @@ input {
   font-size: 13px;
   font-weight: 700;
 }
-.newsletter__email:focus {
+.newsletter__email:hover {
   outline: 1px solid #6779b8;
+}
+.newsletter__email:focus {
+  outline: 2px solid #224de7;
 }
 
 .newsletter__btn {
