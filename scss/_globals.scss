@@ -1,6 +1,6 @@
 body {
     font-family: Quicksand, sans-serif !important;
-
+    overflow-y: hidden;
     &.no-scroll {
         overflow: hidden;
     }
