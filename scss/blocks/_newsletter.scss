@@ -50,8 +50,12 @@
     font-size: 13px;
     font-weight: 700;
 
-    &:focus {
+    &:hover {
         outline: 1px solid #6779b8;
+    }
+
+    &:focus {
+        outline: 2px solid #224de7;
     }
 
 }
