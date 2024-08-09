@@ -8,7 +8,13 @@
 }
 
 .header__logo {
-    @include value-clamp(padding-right, 32px, 4.5vw ,72px);
+    display: flex;
+    @include value-clamp(margin-right, 32px, 4.5vw ,72px);
+
+    & img {
+        width: 26px;
+        height: auto;
+    }
 }
 
 .header__left {
