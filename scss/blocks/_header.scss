@@ -33,7 +33,7 @@
     align-items: center;
 }
 
-.nav__list {
+.header.nav__list {
     display: flex;
     justify-content: flex-start;
     gap: 42px;
@@ -50,7 +50,7 @@
     }
 }
 
-.nav__link{
+.header.nav__link{
     @include font-settings(12px, var(--color-gray), 500, 5);
     text-shadow: 0px 0px 5px rgba($color: #E6E6E6, $alpha: 1.0);
 

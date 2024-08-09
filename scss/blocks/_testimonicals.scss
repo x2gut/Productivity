@@ -30,6 +30,8 @@
     overflow: hidden;
     padding-bottom: 70px;
     margin-top: -30px;
+
+    -webkit-mask: linear-gradient(90deg,#0000,#000 0% 96%,#0000)
 }
 
 .testimonicals__slider-container {
@@ -58,7 +60,7 @@
         position: absolute;
         width: 62px;
         height: 62px;
-        background-image: url("img/face.png");
+        background-image: url("/img/face.png");
         left: 40%;
         bottom: -15%;
     }

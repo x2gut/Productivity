@@ -240,7 +240,7 @@ listeners();
 function moveSlide(direction, steps) {
     testimonicalsItems.slides.forEach(item => {
         item.style.transform = `translateX(${testimonialsVars.initialTranslateX}px)`;
-        item.style.transition = "transform 0.4s ease";
+        item.style.transition = "transform 0.4s ease, opacity 0.2s";
     })
 
     let newIndex = direction === "left" ? testimonialsVars.currentIndex - steps : testimonialsVars.currentIndex + steps;

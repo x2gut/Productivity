@@ -1,0 +1,90 @@
+.start {
+    position: relative;
+    background: linear-gradient(to top, #6888FF, #5E80FF);
+
+    &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        background-image: url("/img/start_clouds.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.start__container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.start__content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 712px;
+    padding-top: 90px;
+}
+
+.start__subtitle {
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.start__title {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 28px;
+    & span {
+        font-weight: 500;
+    }
+}
+
+.start__text {
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 0.45px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.start__btns {
+    display: flex;
+    padding-bottom: 91px;
+}
+
+.start__pricing {
+    border: 0;
+    color: #565F82;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #FFF;
+    padding: 13px 17px;
+    transition: background-color var(--transition-duration) ease;
+
+    &:hover {
+        background-color: #ecf0ff;
+    }
+}
+
+.start__documentation {
+    border: 0.5px solid #C7D3FF;
+    background-color: transparent;
+    color: #C7D3FF;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+
+    &:hover {
+        background-color: #8694cc;
+        color: #FFF;
+    }
+}
